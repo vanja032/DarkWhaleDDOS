@@ -32,9 +32,15 @@ class Master:
     async def send_command(self) -> None:
         while True:
             command = input("Command line >> ")
+            if command == self.commands["clear"]:
+                subprocess.run("clear")
+                continue
             try:
                 peers_copy = self.peers.copy()
                 for client_address in peers_copy:
+                    if command == self.commands["list"]:
+                        print(client_address)
+                        continue
                     client = peers_copy[client_address]
                     writer = client["writer"]
                     try:
