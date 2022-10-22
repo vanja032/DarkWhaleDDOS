@@ -1,5 +1,7 @@
 {
     "quit":":quit",
     "start":":start",
-    "stop":":stop"
+    "stop":":stop",
+    "list":":peer_list",
+    "clear":":clear"
 }
