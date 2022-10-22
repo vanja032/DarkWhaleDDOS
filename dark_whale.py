@@ -1,5 +1,4 @@
 import asyncio
-from nis import cat
 import threading
 import subprocess
 import requests
